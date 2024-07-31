@@ -1,0 +1,96 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.wrapper > .star {
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  overflow: hidden;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.star.style1 {
+  width: 2px;
+  height: 2px;
+}
+
+.star.style2 {
+  width: 3px;
+  height: 3px;
+}
+
+.star.style3 {
+  width: 5px;
+  height: 5px;
+}
+
+.star.opacity1 {
+  opacity: 1;
+}
+
+.star.opacity2 {
+  opacity: 0.5;
+}
+
+.star.opacity3 {
+  opacity: 0.1;
+}
+
+.star.twinkle1 {
+  animation-duration: 0.5s;
+  animation-name: twinkle;
+}
+
+.star.twinkle2 {
+  animation-duration: 1s;
+  animation-name: twinkle;
+}
+
+.star.twinkle3 {
+  animation-duration: 1.5s;
+  animation-name: twinkle;
+}
+
+.star.twinkle4 {
+  animation-duration: 2s;
+  animation-name: twinkleWithoutBoxShadow;
+}
+
+@keyframes twinkle {
+  0% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.1);
+  }
+
+  50% {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+  }
+
+  100% {
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.1);
+  }
+}
+
+@keyframes twinkleWithoutBoxShadow {
+  0% {
+    background-color: #fff;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+  }
+
+  20% {
+    background-color: #ffc4c4;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+  }
+
+  80% {
+    background-color: #c4cfff;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 1);
+  }
+
+  100% {
+    background-color: #fff;
+    box-shadow: 0 0 10px 0px rgba(255, 255, 255, 0.2);
+  }
+}
